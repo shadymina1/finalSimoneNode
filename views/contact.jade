@@ -1,0 +1,20 @@
+extends layout
+
+block content
+      hr.landing-hr
+      .container.landing-content(style='min-height: 20em; margin-bottom: 2em;')
+        img(src='../images/hand.png' width='20%' style='margin-bottom: 2em;' alt='')
+        h3 We would like to here from you
+        form.container.form-login(action='./index' method='post')
+          input.login-input(style='width: 100%;' type='text' placeholder='First Name ')
+          br
+          input.login-input(style='width: 100%;' type='text' placeholder='Last Name ')
+          br
+          input.login-input(style='width: 100%;' type='text' placeholder='emial ')
+          br
+          input.login-input(style='width: 100%;' type='text' placeholder='Subject ')
+          br
+          textarea.login-input(style='height: 20em;width: 100%;' type='text' placeholder='Message: ')
+          br
+          a.btn.btn-info.login-input-btn(href='thanks' style='width: 100%;') Send
+    div(style='min-height: 6em;')  

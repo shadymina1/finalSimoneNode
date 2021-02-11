@@ -1,0 +1,146 @@
+extends layout
+
+block content
+      hr.landing-hr
+      .container.landing-content(style='min-height: 20em; margin-bottom: 2em;')
+        h2
+          | Step2  
+          br
+          |  Please select or deselect the below boxes, depends on your availability
+        br
+        form(action="payment" method='post') 
+          table.table
+            thead
+              tr
+                th(style='padding: 0;' scope='col') PM
+                th(style='padding: 0;' scope='col') Sun
+                th(style='padding: 0;' scope='col') Mon
+                th(style='padding: 0;' scope='col') Tue
+                th(style='padding: 0;' scope='col') Wed
+                th(style='padding: 0;' scope='col') Thu
+                th(style='padding: 0;' scope='col') Fri
+                th(style='padding: 0;' scope='col') Sat
+            tbody
+              tr
+                th(style='padding: 0;' scope='row') 3:00-4:00
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+              tr
+                th(style='padding: 0;' scope='row') 4:00-5:00
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+              tr
+                th(style='padding: 0;' scope='row') 5:00-6:00
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+              tr
+                th(style='padding: 0;' scope='row') 6:00-7:00
+                td(style='background-color: rgb(243, 214, 214);')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+              tr
+                th(style='padding: 0;' scope='row') 7:00-8:00
+                td(style='background-color: rgb(243, 214, 214);')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+                  //
+                    <div style="padding: 0;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    </div>
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+              tr
+                th(style='padding: 0;' scope='row') 8:00-9:00
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td(style='background-color: rgb(243, 214, 214);')
+                  //
+                    <div style="padding: 0;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    </div>
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+                td
+                  div(style='padding: 0;')
+                    input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+          button.btn.btn-info.login-input-btn Submit 
+        br
+      div(style='min-height: 6em;')  
