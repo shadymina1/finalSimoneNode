@@ -11,9 +11,12 @@ block content
             | make your artwork looks professional with the greatest academic techniques.
           br
       br
-      form.container.form-login(action='./Enroll' method'post')
+      form.container.form-login(action='./Enroll' method='post')
         .container
-          button.btn.btn-danger.main-Enroll  Enroll Now! 
+          if (is_session)
+            a(href='/profileStudent').btn.btn-danger.main-Enroll  Profile
+          else 
+            button.btn.btn-danger.main-Enroll  Enroll Now! 
           br
     div(style='min-height: 6em;')
   

@@ -22,11 +22,17 @@ html(lang='en')
               li.nav-item
                 a.nav-link.active(href='./ourclasses') Our Classes
               li.nav-item
-                a.nav-link.active(s='' href='./Enroll') Enroll
+                if(is_session)
+                  a(style='color:#000000;' href='./profileStudent').nav-link.active Profile
+                else 
+                  a.nav-link.active(href='./enroll') Enroll
               li.nav-item
                 a.nav-link.active(href='./contact') Contact Us
               li.nav-item
-                a.nav-link.active.btn.btn-outline-dark(href='./login') Login
+                if(is_session)
+                  a.nav-link.active.btn.btn-outline-dark(href='./logout') Logout
+                else 
+                  a.nav-link.active.btn.btn-outline-dark(href='./login') Login
     .banner-container
       a(href='./')
         img(src='../images/LOGO.png' width='100%' alt="Simone's Art Academy")
@@ -36,4 +42,4 @@ html(lang='en')
     footer
       p  © 2021 | Simone's Art Academy
 
-script(src='../javascripts/zz.js')
+script(src='../javascripts/script.js')

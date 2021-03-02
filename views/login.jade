@@ -5,11 +5,14 @@ block content
     h1.slogan
       | Welcome To Simone's Art Academy
     br
-    form.container.form-login(action='./')
+    h3(style='color:red;') #{wrong} 
+      br
+      a(href='./enroll') #{erollNow}
+    form.container.form-login(action='./login' method='post')
       .container.credentials
-        input.login-input(type='email' name='loged_email' id='' placeholder='Enter your email' required='')
+        input.login-input(type='email' name='email' id='' placeholder='Enter your email' required='')
         br
-        input.login-input(type='password' name='loged_pass' placeholder='Enter your password' id='' required='')
+        input.login-input(type='password' name='pass' placeholder='Enter your password' id='' required='')
         br
         button.btn.btn-info.login-input-btn Login
         br

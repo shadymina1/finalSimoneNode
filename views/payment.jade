@@ -1,12 +1,12 @@
 extends layout
 
 block content
-      hr.landing-hr
+      
       .container.landing-content(style='min-height: 20em; margin-bottom: 2em;')
         .container
           form(action='./enrolled')
             h3 Billing Address
-            input#fname.login-input(required='' type='text' name='firstname' placeholder=' Full Name')
+            input#fName.login-input(required='' type='text' name='firstname' placeholder=' Full Name')
             br
             input#adr.login-input(required='' type='text' name='address' placeholder='Address')
             br

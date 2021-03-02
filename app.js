@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+var session = require('express-session'); // to use session  === session stuff
+
 var contactRouter = require('./routes/contact');
 var enrollRouter = require('./routes/enroll');
 var enroll2Router = require('./routes/enroll2');
@@ -13,6 +16,12 @@ var ourclassesRouter = require('./routes/ourclasses');
 var paymentRouter = require('./routes/payment');
 var sendPasswordRouter = require('./routes/sendPassword');
 var thanksRouter = require('./routes/thanks');
+var accessDeniedRouter = require('./routes/accessDenied');
+var enroll2ProfileRouter = require('./routes/enroll2Profile');
+var profileStudentRouter = require('./routes/profileStudent');
+var changingDataRouter = require('./routes/changingData');
+var logoutRouter = require('./routes/logout');
+
 //var usersRouter = require('./routes/users');
 
 var app = express();
@@ -27,6 +36,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({secret:'ABCD'})); //to create the session === session stuf
+
 app.use('/', indexRouter);
 app.use('/contact', contactRouter);
 app.use('/thanks', thanksRouter);
@@ -37,10 +48,17 @@ app.use('/login', loginRouter);
 app.use('/ourclasses', ourclassesRouter);
 app.use('/payment', paymentRouter);
 app.use('/sendPassword', sendPasswordRouter);
+app.use('/accessDenied', accessDeniedRouter);
+app.use('/enroll2Profile', enroll2ProfileRouter);
+app.use('/profileStudent', profileStudentRouter);
+app.use('/changingData', changingDataRouter);
+app.use('/logout', logoutRouter);
+
 //app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  //next(res.redirect('/accessDenied'));
   next(createError(404));
 });
 

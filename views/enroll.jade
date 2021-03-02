@@ -1,41 +1,21 @@
 extends layout
 
 block content
-  hr.landing-hr
+  h2(style='color: red;').slogan #{messageToRegister}
   .container.landing-content(style='min-height: 20em; margin-bottom: 2em;')
     h2
       | Step 1 
       br
       |  Please fill the belwo form:
     br
-    form.container.form-login(action='./enroll2' method='post')
+    form.container.form-login(action='./enroll' method='post')
       .container.credentials
-        label(for='email') Your email:
         br
-        input.login-input(required='' type='email' name='email' id='' placeholder='Enter your email')
-        br
-        label(for='pass') Your password:
+        input.login-input(required='' type='email' name='email' id='' placeholder='Enter your email')       
         br
         input.login-input(required='' type='password' name='pass' placeholder='Enter your password' id='')
         br
-        label(for='pass') Your password again:
-        br
-        input.login-input(required='' type='password' name='rpass' placeholder='Retupe your password' id='')
-        br
-        label(for='pass') Student first name:
-        br
-        input.login-input(required='' type='text' name='loged_pass' placeholder='Enter Student First Name' id='')
-        br
-        label(for='pass') Student last name:
-        br
-        input.login-input(required='' type='text' name='loged_pass' placeholder='Enter Student Last Name' id='')
-        br
-        label(for='grades') Choose grade:
-        br
-        select#browsers.login-input(name='grades')
-          option.login-input(value='a') Grade 1 to 3
-          option.login-input(value='b') Grade 4 to 6
-          option.login-input(value='c') Grade 7 to 9
+        input.login-input(required='' type='text' name='cell' placeholder='Cell' id='')
         br
         .form-check
           label.form-check-label(for='flexCheckDefault')

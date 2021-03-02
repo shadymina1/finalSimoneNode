@@ -1,9 +1,18 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+var ssn;
 router.get('/', function(req, res, next) {
-  res.render('enrolled', { title: "Simone's Academy" });
+ 
+     res.render('enrolled', { title: "Simone's Academy" });
+  
+ 
+});
+router.get('/', function(req, res, next) {
+
+     res.redirect('/profile')
+  
+ 
 });
 
 module.exports = router;

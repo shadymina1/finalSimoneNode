@@ -1,12 +1,17 @@
 var express = require('express');
 var router = express.Router();
+var ssn; // we have declare ssn everytime dealing with session!!
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('payment', { title: "Simone's Academy" });
-});
+  ssn=req.session;
+  if(ssn.email){
+    res.render('payment', {is_session:ssn.email, title: "Simone's Academy" });
+  }
+    
 
-router.post('/', function(req, res, next) {
-    res.render('payment', { title: "Simone's Academy" });
+    
+
+
+
   });
 module.exports = router;
